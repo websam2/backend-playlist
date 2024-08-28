@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Música</title>
+</head>
+<body>
+    <h1>Cadastro de Música</h1>
+    <form action="/api/playlists" method="POST" enctype="multipart/form-data">
+        <label for="nome">Nome da Música:</label>
+        <input type="text" name="nome" required><br><br>
+        
+        <label for="descricao">Descrição:</label>
+        <textarea name="descricao" required></textarea><br><br>
+        
+        <label for="arquivo_mp3">Arquivo .mp3:</label>
+        <input type="file" name="arquivo_mp3" accept=".mp3" required><br><br>
+        
+        <button type="submit">Cadastrar</button>
+    </form>
+</body>
+</html>
