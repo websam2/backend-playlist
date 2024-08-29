@@ -12,6 +12,11 @@ app.use(express.static('public'));
 // Rotas da API
 app.use('/api', playlistRoutes);
 
+// Redirecionamento da rota raiz para o formulário
+app.get('/', (req, res) => {
+  res.redirect('/form.html');
+});
+
 // Inicia o servidor
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
